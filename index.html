@@ -1,1 +1,166 @@
-11
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design2</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="elem-div">
+        <a
+          href=""
+          class="elems"
+          data-image="2.webp"
+          data-height="250px"
+          data-width=" 350px"
+        >
+          <h2>Marcus recion</h2>
+        </a>
+        <a
+          href=""
+          class="elems"
+          data-image="3.webp"
+          data-height="250px"
+          data-width=" 350px"
+        >
+          <h2>Marcus recion</h2>
+        </a>
+        <a
+          href=""
+          class="elems"
+          data-image="4.webp"
+          data-height="200px"
+          data-width=" 300px"
+        >
+          <h2>Marcus recion</h2>
+        </a>
+        <a
+          href=""
+          class="elems"
+          data-image="5.webp"
+          data-height="250px"
+          data-width=" 350px"
+        >
+          <h2>Marcus recion</h2>
+        </a>
+        <a
+          href=""
+          class="elems"
+          data-image="7.webp"
+          data-height="220px"
+          data-width=" 320px"
+        >
+          <h2>Marcus recion</h2>
+        </a>
+        <a
+          href=""
+          class="elems"
+          data-image="8.webp"
+          data-height="250px"
+          data-width=" 300px"
+        >
+          <h2>Marcus recion</h2>
+        </a>
+        <a
+          href=""
+          class="elems"
+          data-image="9.webp"
+          data-height="250px"
+          data-width=" 350px"
+        >
+          <h2>Marcus recion</h2>
+        </a>
+        <a
+          href=""
+          class="elems"
+          data-image="10.webp"
+          data-height="250px"
+          data-width=" 350px"
+        >
+          <h2>Marcus recion</h2>
+        </a>
+        <a
+          href=""
+          class="elems"
+          data-image="11.webp"
+          data-height="250px"
+          data-width=" 350px"
+        >
+          <h2>Marcus recion</h2>
+        </a>
+        <a
+          href=""
+          class="elems"
+          data-image="2.webp"
+          data-height="250px"
+          data-width=" 350px"
+        >
+          <h2>Marcus recion</h2>
+        </a>
+        <a
+          href=""
+          class="elems"
+          data-image="2.webp"
+          data-height="250px"
+          data-width=" 350px"
+        >
+          <h2>Marcus recion</h2>
+        </a>
+        <a
+          href=""
+          class="elems"
+          data-image="2.webp"
+          data-height="250px"
+          data-width=" 350px"
+        >
+          <h2>Marcus recion</h2>
+        </a>
+        <a
+          href=""
+          class="elems"
+          data-image="2.webp"
+          data-height="250px"
+          data-width=" 350px"
+        >
+          <h2>Marcus</h2>
+        </a>
+      </div>
+      <div id="img"></div>
+    </div>
+    <script src="./script.js"></script>
+    <script>
+
+document.addEventListener("DOMContentLoaded", function () {
+  var elems = document.querySelectorAll(".elems");
+  var imgDiv = document.getElementById("img");
+
+  elems.forEach(function (elem) {
+    // Iterate over each element
+    elem.addEventListener("mouseenter", function () {
+      let img = elem.getAttribute("data-image");
+      let w = elem.getAttribute("data-width");
+      let h = elem.getAttribute("data-height");
+
+      imgDiv.style.backgroundImage = `url(${img})`;
+      imgDiv.style.width = w;
+      imgDiv.style.height = h;
+      imgDiv.style.display = "block"; // Show the image div
+    });
+
+    elem.addEventListener("mouseleave", function () {
+      imgDiv.style.display = "none"; // Hide the image div
+    });
+
+    elem.addEventListener("mousemove", function (e) {
+      imgDiv.style.left = e.pageX + 10 + "px"; // Offset to avoid flickering
+      imgDiv.style.top = e.pageY + 10 + "px"; // Offset to avoid flickering
+    });
+  });
+});
+
+    </script>
+  </body>
+</html>
